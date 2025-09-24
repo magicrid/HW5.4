@@ -18,15 +18,15 @@ int main()
     }
 
 
-    for (int i = 0; i < 10; i++) 
+    for (int i = 0; i < 10 - 1; i++)
     {
-        for (int j = 0; j < 9; j++) 
+        for (int j = 9; j > i; j--)
         {
-            if (mass[j] > mass[j + 1]) 
+            if (mass[j] < mass[j - 1]) 
             {
                 int b = mass[j];
-                mass[j] = mass[j +1];
-                mass[j + 1] = b;
+                mass[j] = mass[j - 1];
+                mass[j - 1] = b;
             }
         }
     }
